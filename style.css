@@ -59,6 +59,96 @@ border-radius: 5px;
     border-radius: 5px;
     border-color: rgb(255, 106, 0);
 }
+@media(max-width:576px){
+    .input{
+        height: 30px;
+    }
+    .number{
+        width: 70px;
+        height: 40px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    #simvol{
+        width: 70px;
+        height: 40px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .operation{
+        width: 70px;
+        height: 40px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .btn{
+        width: 70px;
+        height: 40px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+@media(max-width:320px){
+    .input{
+        height: 30px;
+    }
+    .number{
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    #simvol{
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .operation{
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .btn{
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+@media(max-width:480px){
+    .input{
+        height: 30px;
+    }
+    .number{
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    #simvol{
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .operation{
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .btn{
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
 
 
 
