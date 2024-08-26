@@ -133,6 +133,14 @@
                 alymbekDB.splice(0, 2)
                 console.log(alymbekDB)
                 u=0
+            }else if (d >= 1) {
+                let otvet = alymbekDB.reduce((akum, a) => akum / a)
+
+                console.log(otvet)
+                input.value = `${String(otvet)}`
+                alymbekDB.splice(0, 2)
+                console.log(alymbekDB)
+                d = 0
             }
 
 
