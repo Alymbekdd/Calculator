@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <input class="input" type="text">
+        <div class="items">
+            <div class="numbers">
+                <div>
+                    <button class="number">0</button>
+                    <button class="number" onclick="op='1'">1</button>
+                    <button class="number" onclick="op='2'">2</button>
+                </div>
+                <div>
+                    <button class="number" onclick="op='3'">3</button>
+                    <button class="number" onclick="op='4'">4</button>
+                    <button class="number" onclick="op='5'">5</button>
+                </div>
+                <div>
+                    <button class="number" onclick="op='6'">6</button>
+                    <button class="number" onclick="op='7'">7</button>
+                    <button class="number" onclick="op='8'">8</button>
+                </div>
+                <div>
+                    <button class="number" onclick="op='9'">9</button>
+                    <button class="operation">x</button>
+                    <button class="btn">=</button>
+                </div>
+
+            </div>
+            <div class="simvols">
+                <button id="simvol" class="plus">+</button>
+                <button id="simvol" class="minus">-</button>
+                <button id="simvol" class="umno">*</button>
+                <button id="simvol" class="delit">/</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let input = document.querySelector(".input");
+        let numbers = document.querySelectorAll(".number");
+        let plus = document.querySelector(".plus");
+        let minus = document.querySelector(".minus");
+        let umno = document.querySelector(".umno");
+        let delit = document.querySelector(".delit");
+        let operation = document.querySelector(".operation");
+        let btn = document.querySelector(".btn");
+        let number0 = document.querySelector(".number0");
+        let p = 0;
+        let m = 0;
+        let u = 0;
+        let d = 0;
+        let alymbekDB = [];
+
+
+        plus.addEventListener("click", function () {
+            p++
+            let inputValue = Number(input.value)
+            alymbekDB.push(inputValue)
+            console.log(alymbekDB)
+            input.value = ""
+
+        })
+
+        minus.addEventListener("click", function () {
+            m++
+            let inputValue = Number(input.value)
+            alymbekDB.push(inputValue)
+            console.log(alymbekDB)
+            input.value = ""
+
+        })
+
+        umno.addEventListener("click", function () {
+            u++
+            let inputValue = Number(input.value)
+            alymbekDB.push(inputValue)
+            console.log(alymbekDB)
+            input.value = ""
+
+        })
+
+        delit.addEventListener("click", function () {
+            d++
+            let inputValue = Number(input.value)
+            alymbekDB.push(inputValue)
+            console.log(alymbekDB)
+            input.value = ""
+
+        })
+
+        operation.addEventListener("click", function () {
+            let inputValue = Number(input.value)
+            input.value = ""
+
+        })
+
+        
+        btn.addEventListener("click", function () {
+            let inputValue = Number(input.value)
+            alymbekDB.push(inputValue)
+
+            if (p >= 1) {
+                let otvet = alymbekDB.reduce((akum, a) => akum + a)
+
+                console.log(otvet)
+                input.value = `${String(otvet)}`
+                alymbekDB.splice(0, 2)
+                console.log(alymbekDB)
+                p=0
+            } else if (m >= 1) {
+                let otvet = alymbekDB.reduce((akum, a) => akum - a)
+
+                console.log(otvet)
+                 input.value = `${String(otvet)}`
+                alymbekDB.splice(0, 2)
+                console.log(alymbekDB)
+                m=0
+            } else if (u >= 1) {
+                let otvet = alymbekDB.reduce((akum, a) => akum * a)
+
+                console.log(otvet)
+                 input.value = `${String(otvet)}`
+                alymbekDB.splice(0, 2)
+                console.log(alymbekDB)
+                u=0
+            }
+
+
+
+        })
+
+
+
+
+        numbers.forEach((item, idx) => {
+            item.addEventListener("click", function () {
+                let inputValue = input.value
+                input.value += `${idx}`
+
+
+            })
+        })
+
+      
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
